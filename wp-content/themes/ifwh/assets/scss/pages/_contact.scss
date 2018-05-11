@@ -1,0 +1,568 @@
+/*========================================
+=            |Contact Wrapper            =
+========================================*/
+
+#contact-wrapper {
+	background:#eaecf0;
+	padding-bottom: 50px;
+	/* location wrap */
+	#location-wrap {
+		background:$color-white;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+		padding-bottom: 80px;
+		height: 530px;
+		.location-slide {
+			header {
+				text-align: center;
+				height: 60px;
+				line-height: 60px;
+				@include green-grad;
+				.title {
+					font-size: 18px;
+					color:$color-white;
+					@include font-shadow;
+					font-family: $font-heading;
+					@include breakpoint(laptop) {
+						font-size: 16px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 16px;
+					}
+					@include breakpoint(phone) {
+						font-size: 16px;
+					}
+				}
+			}
+			.location-content {
+				padding:20px;
+				img {
+					width: 100%;
+					object-fit: cover;
+					height: 170px;
+					padding:5px;
+					box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+					margin-bottom: 20px;
+				}
+				address {
+					font-size: 16px;
+					color:$color-gray;
+					line-height: 18px;
+					font-style: normal;
+					margin-bottom: 15px;
+					position: relative;
+					padding-left: 25px;
+					br {
+						@include breakpoint(tablet) {
+							display: none;
+						}
+					}
+					&:before {
+						@include font-ico;
+						top:0px;
+						content:'\f041';
+						color:$color-green;
+						left:0px;
+						width: 30px;
+					}
+				}
+				p {
+					position: relative;
+					&.tel-ico {
+						&:before {
+							@include font-ico;
+							top:-1px;
+							color:$color-green;
+							left:0px;
+							width: 20px;						
+							content:'\f095';							
+						}				
+					}		
+					&.fax-ico {
+						&:before {
+							@include font-ico;
+							top:-1px;
+							color:$color-green;
+							left:0px;
+							width: 20px;						
+							content:'\f1ac';							
+						}				
+					}						
+				}
+				p {
+					font-size: 16px;
+					color:$color-gray;
+					margin-bottom: 15px;
+					padding-left: 25px;
+					a {
+						color:$color-gray;
+					}
+				}
+				.read-btn {
+					@include read-btn;
+				}				
+			}
+		}
+	}
+	/* locaiton wrap */
+	#map-wrap {
+		height: 530px;
+		border:10px solid $color-white;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+	}
+}
+
+/*=====  End of |Contact Wrapper  ======*/
+
+/*==============================================
+=            Full width form wraper            =
+==============================================*/
+
+#form-wrapper-full {
+	background:$color-green;
+	padding-bottom: 100px;
+	padding-top: 30px;
+	/* sidebar */
+	.sidebar-cta {
+		a {
+			display: block;
+			height: 80px;
+			line-height: 80px;
+			border-radius:9px;
+			background:$color-white;
+			margin-bottom: 13px;
+			@include font-shadow;
+			@include block-shadow;
+			font-size: 24px;
+			color:$color-gray;
+			padding-left: 30px;
+			@include breakpoint(laptop) {
+				font-size: 20px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 20px;
+			}
+			@include breakpoint(phone) {
+				font-size: 20px;
+			}
+			&:hover {
+				background:$color-blue;
+				color:$color-white;
+				i {
+					color:$color-white;
+				}
+			}
+			i {
+				width: 50px;
+				text-align: center;
+				color:$color-pink;
+			}
+			&.book-btn {
+				padding-left: 0px;
+				text-align: center;
+				text-transform: uppercase;
+				@include pink-grad;
+				color:$color-white;
+			}
+		}
+	}
+	.form-content {
+		header {
+			.form-title {
+				color:$color-white;
+				display: block;
+				font-family: $font-heading;
+				font-size: 30px;
+    			background: url(../img/ico/small-logo-white.png) no-repeat 0px 15px;		
+    			padding-top: 20px;
+			    padding-bottom: 20px;
+			    padding-left: 50px;		
+			    border-bottom:1px solid #598f40;
+			    margin-bottom: 30px;
+			    @include breakpoint(tablet) {
+			    	font-size: 26px;
+			    }
+			    @include breakpoint(phone) {
+			    	font-size: 26px;
+			    }
+			}
+		}
+		.form-box  {
+			label {
+				display: block;
+				font-size: 16px;
+				margin-top: 20px;
+				margin-bottom: 10px;
+				color:$color-white;
+			}
+			br {
+				display: none;
+			}
+			input[type="text"], input[type="email"], input[type="tel"] {
+				height: 45px;
+				line-height: 45px;
+				padding-left: 25px;
+				border:none;
+				border-radius:9px;
+				width: 100%;
+				&:focus {
+					outline: 0;
+					font-size: 16px;
+					color:$color-gray;
+				}
+			}
+			textarea {
+				height: 155px;
+				line-height: 20px;
+				padding-top: 20px;
+				padding-left: 25px;
+				border:none;
+				border-radius:9px;
+				width: 100%;
+				&:focus {
+					outline: 0;
+					font-size: 16px;
+					color:$color-gray;
+				}				
+			}
+			input[type="submit"] {
+				float: right;
+				@include pink-grad;
+				width: 170px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				color:$color-white;
+				border:none;
+				border-radius:12px;
+				margin-top: 15px;
+				@include animate-fade;
+				&:hover {
+					cursor: pointer;
+					background:$color-blue;
+				}
+				&:focus {
+					outline: 0;
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Full width form wraper  ======*/
+
+/*======================================
+=            Schedule Forms            =
+======================================*/
+
+#schedule-wrapper {
+	background:#eaecf0;
+	padding-bottom: 50px;
+	/* schedule content */
+	#schedule-content {
+		background:$color-white;
+		padding-left: 30px;
+		padding-top: 40px;
+		padding-right: 30px;
+		padding-bottom: 50px;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15); 
+		@include breakpoint(tablet) {
+			min-height: auto!important;
+		}
+		@include breakpoint(phone) {
+			min-height: auto!important;
+			padding:25px;
+		}
+		h2 {
+			color:$color-pink;
+			font-size: 32px;
+			margin-bottom: 30px;
+			@include breakpoint(phone) {
+				font-size: 26px;
+			}
+		}
+		h3 {
+			margin-bottom: 15px;
+			color:$color-green;
+			font-size: 26px;
+			@include breakpoint(phone) {
+				font-size: 22px;
+			}
+		}
+		h4 {
+			margin-bottom: 15px;
+			color:$color-black;
+			font-size: 20px;
+			font-weight: $bold;
+			@include breakpoint(phone) {
+				font-size: 16px;
+			}
+		}
+		p {
+			@include regular-text;
+			color:$color-gray;
+			text-shadow: none;
+			margin-bottom: 30px;
+			a {
+				color:$color-pink;
+				&:hover {
+					color:$color-green;
+				}
+			}
+		}
+		ul {
+		margin-top: 15px;
+			margin-bottom: 15px;
+			li {
+				color:$color-gray;
+				font-size: 16px;
+				display: block;
+				padding-top: 8px;
+				padding-bottom: 8px;
+				position: relative;
+				padding-left: 25px;
+				&:before {
+					content:'\f1db';
+					@include font-ico;
+					left:0px;
+					top:10px;
+					color:$color-green;
+					font-size: 13px;
+				}
+				a {
+					color:$color-pink;
+					&:hover {
+						color:$color-green;
+					}
+				}
+			}
+		}		
+	}
+	/* form */
+	#schedule-form {
+		
+		@include green-grad;
+		padding:50px;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15); 
+		@include breakpoint(phone) {
+			padding:25px;
+		}
+		.form-box  {
+
+			.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+				width: 100%;
+				height: 40px;
+				margin-bottom: 10px;
+				border-radius:12px;
+				&:focus {
+					outline: 0;
+					background:$color-white;
+				}
+				&:hover {
+					background:$color-white;
+				}					
+				@include breakpoint(phone) {
+					width: 100%;
+				}
+			}
+			.btn {
+				height: 40px;
+				border-radius:0px;
+				font-size: 16px;
+				color:#353535;
+				border:none;
+				border-radius:12px;
+				padding-left: 20px;
+				&:focus {
+					outline: 0;
+					background:$color-white;
+				}
+				&:hover {
+					background:$color-white;
+				}
+			}
+			button {
+				&:focus {
+					outline: 0!important;
+					box-shadow:none;
+				}		
+				&:hover {
+					background:none;
+				}	
+			}
+			div.open {
+				.caret {
+					background:$color-pink;
+					&:after {
+						color:$color-white;
+					}
+				}
+			}
+			.btn-group {
+				width: 100%;
+			}
+			.caret {
+				background:url(../img/ico/gray-down.jpg) no-repeat center center;
+				width: 40px;
+				height: 40px;
+				border:none;
+				background:$color-white;
+				top:2px;
+				right: 0px;
+				@include animate-fade;
+				border-top-right-radius: 9px;
+				border-bottom-right-radius: 9px;	
+				border-left:1px solid #cfe9a4;
+				&:after {
+					@include font-ico;
+					@include centre(y);
+					content:'\f107';
+					left:40%;
+				}				
+			}		
+			.btn-group.open .dropdown-toggle {
+				box-shadow:none!important;
+				background:$color-white!important;
+			}		
+			.btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.btn-default.dropdown-toggle {
+				background:none;
+				background:$color-white!important;
+			}		
+			.dropdown-menu {
+				padding:5px;
+				box-shadow:none;
+				li {
+					a {
+						font-size: 14px;
+						color:$color-black;
+						padding:5px;
+						&:hover {
+						}
+					}
+				}
+			}
+
+			br {
+				display: none;
+			}
+			label {
+				display: block;
+				font-size: 16px;
+				margin-top: 20px;
+				margin-bottom: 10px;
+				color:$color-white;
+			}
+			input[type="text"], input[type="email"], input[type="tel"] {
+				height: 40px;
+				line-height: 40px;
+				padding-left: 25px;
+				border:none;
+				border-radius:9px;
+				width: 100%;
+				&:focus {
+					outline: 0;
+					font-size: 16px;
+					color:$color-gray;
+				}
+			}
+			textarea {
+				height: 155px;
+				line-height: 20px;
+				padding-top: 20px;
+				padding-left: 25px;
+				border:none;
+				border-radius:9px;
+				width: 100%;
+				&:focus {
+					outline: 0;
+					font-size: 16px;
+					color:$color-gray;
+				}				
+			}
+		}	
+
+		input[type="submit"] {
+			@include pink-grad;
+			width: 250px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			color:$color-white;
+			border:none;
+			border-radius:12px;
+			margin-top: 15px;
+			@include animate-fade;
+			font-size: 18px;
+			text-transform: uppercase;
+			font-family: $font-heading;
+			font-weight: $bold;
+			&:hover {
+				cursor: pointer;
+				background:$color-pink;
+			}
+			&:focus {
+				outline: 0;
+			}
+		}
+
+	}
+}
+
+/*=====  End of Schedule Forms  ======*/
+
+/*====================================
+=            New Patietns            =
+====================================*/
+
+#patients-list-block {
+	background:#eaecf0;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		&:hover {
+			.patient-box {
+				background:$color-green!important;
+				.title {
+					color:$color-white;
+				}
+				small i {
+					color:$color-white;
+				}
+			}
+		}
+	}	
+	.patient-box {
+		background:$color-white;
+		text-align: center;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15); 
+		@include animate-fade;
+		padding: 35px;
+		margin-bottom: 30px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		small i {
+			font-size: 50px;
+			margin-bottom: 30px;
+			color:$color-green;
+			@include animate-fade;
+		}
+		.title {
+			display: block;
+			color:$color-pink;
+			font-size: 26px;
+			font-family: $font-heading;
+			margin-bottom: 25px;
+			line-height: 110%;
+			@include breakpoint(laptop) {
+				font-size: 24px;
+			}
+		}
+		span.read-btn {
+			@include read-btn;
+		}
+	}	
+}
+
+/*=====  End of New Patietns  ======*/

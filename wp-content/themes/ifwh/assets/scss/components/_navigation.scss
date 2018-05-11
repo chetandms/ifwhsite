@@ -1,0 +1,220 @@
+/*========================================
+=            Menu Bar Desktop            =
+========================================*/
+
+#menu-bar {
+	line-height:55px;
+	@include breakpoint(tablet) {
+		line-height: 50px;
+	}
+	ul {
+		> li.ubermenu-item-level-0  {
+			display: inline-block;
+		>	a {
+				font-size: 16px;
+				color:$color-white;
+				font-family: $font-heading;
+				padding-left: 20px;
+				padding-right: 20px;
+				@include font-shadow;
+				border-right: 1px dotted #076d78;
+				@include breakpoint(laptop) {
+					font-size: 13px;
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-top: 18px;
+					padding-bottom: 18px;
+				}
+				@include breakpoint(tablet) {
+					font-size: 12px;
+					padding-left: 7px;
+					padding-right: 7px;
+				}
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+			&:last-child {
+				a {
+					border:none;
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Menu Bar Desktop  ======*/
+
+/*==================================
+=            Uber Fixes            =
+==================================*/
+
+
+.ubermenu.ubermenu-disable-submenu-scroll .ubermenu-item>.ubermenu-submenu.ubermenu-submenu-type-mega {
+	background: rgba(8,156,172,1)!important;
+	background: -moz-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(8,156,172,1)), color-stop(100%, rgba(7,134,148,1)))!important;
+	background: -webkit-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: -o-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: -ms-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: linear-gradient(to right, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#089cac', endColorstr='#078694', GradientType=1 )!important;
+}
+
+.ubermenu-sub-indicators .ubermenu-has-submenu-drop>.ubermenu-target:after {
+	right:5px!important;
+	font-size: 14px!important;
+}
+
+.ubermenu-target-with-image  {
+	&:hover {
+		opacity: 0.8;
+		&:before {
+			display: none!important;
+		}
+	}
+}
+
+.ubermenu-image {
+	border-radius:6px!important;
+	@include block-shadow;
+}
+
+
+ul.ubermenu-submenu {
+	.menu-title {
+		font-size: 18px;
+		display: block;
+		font-family: $font-heading;
+		text-transform: uppercase;
+		color:$color-white;
+		padding-bottom: 10px;
+		border-bottom:1px solid rgba(255,255,255,0.2);
+		@include breakpoint(laptop) {
+			font-size: 16px;
+		}
+	}
+	.menu-title-empty {
+		font-size: 18px;
+		display: block;
+		font-family: $font-heading;
+		text-transform: uppercase;
+		color:$color-white;
+		padding-bottom: 10px;
+	}
+	li {
+		a.ubermenu-item-layout-text_only {
+			font-size: 15px!important;
+			opacity: 0.7;
+			color:$color-white;
+			position: relative;
+			&:before {
+				@include font-ico;
+				content:'\f105';
+				color:$color-white;
+				left:20px;
+				top:8px;
+				text-shadow: none;
+				opacity: 0;
+				@include animate-fade;
+			}			
+			&:hover {
+				opacity: 1;
+				position: relative;
+				padding-left: 35px!important;
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+/*=====  End of Uber Fixes  ======*/
+
+/*================================
+=            Shiftnav            =
+================================*/
+
+#shiftnav-toggle-main {
+	background:$color-blue;
+}
+
+#shiftnav-toggle-main .shiftnav-toggle-burger, #shiftnav-toggle-main.shiftnav-toggle-main-entire-bar:before {
+	padding:10px;
+	font-size: 20px;
+}
+
+.shiftnav-inner {
+	background: rgba(8,156,172,1)!important;
+	background: -moz-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(8,156,172,1)), color-stop(100%, rgba(7,134,148,1)))!important;
+	background: -webkit-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: -o-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: -ms-linear-gradient(left, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	background: linear-gradient(to right, rgba(8,156,172,1) 0%, rgba(7,134,148,1) 100%)!important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#089cac', endColorstr='#078694', GradientType=1 )!important;	
+}
+
+.shiftnav.shiftnav-skin-standard-dark, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu {
+	background:none!important;
+}
+
+.shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item > .shiftnav-target {
+	border-bottom:1px solid rgba(255,255,255,0.2)!important;
+	color:$color-white;
+	@include font-shadow;
+	border-top:none!important;
+	font-family: $font-heading;
+	font-size: 16px !important;
+}
+
+.shiftnav.shiftnav-nojs.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item > .shiftnav-target:hover, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-active > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-in-transition > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.current-menu-item > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-accordion.current-menu-ancestor > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-shift.current-menu-ancestor > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-highlight li.menu-item > .shiftnav-target:active, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-on-hover li.menu-item > .shiftnav-target:hover {
+	background:$color-green!important;
+}
+
+.shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu ul.sub-menu {
+	background:#07737d!important;
+}
+
+.shiftnav.shiftnav-skin-standard-dark li.menu-item .shiftnav-submenu-activation {
+	border-top:none!important;
+	border-bottom:1px solid  rgba(255,255,255, 0.2)!important;
+	background:#07737d!important;
+}
+
+.shiftnav-sub-active-current {
+	border-bottom:1px solid  rgba(255,255,255, 0.2)!important;
+}
+
+
+
+.shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu ul.sub-menu ul.sub-menu li.menu-item > .shiftnav-target {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	font-size: 12px !important;
+	line-height:110%;
+	padding-left: 35px !important;
+	border:none!important;
+}
+
+.shiftnav ul.shiftnav-menu li.menu-item>.shiftnav-target, .shiftnav ul.shiftnav-menu li.shiftnav-retract>.shiftnav-target {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
+	line-height:150%!important;
+}
+
+.shiftnav:after {
+	box-shadow:none!important;
+}
+
+/*=====  End of Shiftnav  ======*/
+
+.shiftnav-main-toggle-content  {
+	.wpml-ls-legacy-list-horizontal {
+		padding:0px;
+		position: relative;
+		top:-6px;
+	}
+}

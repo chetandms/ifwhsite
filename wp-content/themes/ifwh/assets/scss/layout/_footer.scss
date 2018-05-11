@@ -1,0 +1,553 @@
+/*==================================
+=            Newsletter            =
+==================================*/
+
+#newsletter-block {
+	background:url(../img/bg/newsletter.jpg) no-repeat center top;
+	background-size:cover;
+	height:250px;
+	@include breakpoint(phone) {
+		height: auto;
+		padding-bottom: 30px;
+	}
+	@include breakpoint(tablet) {
+		background-position: -430px bottom!important;
+	}
+	#newsletter-content {
+		padding-top: 60px;
+		text-align: center;
+		#mce-responses {
+			float: left;
+		}
+		.title {
+			color:$color-white;
+			font-family: $font-heading;
+			@include font-shadow;
+			font-size: 30px;
+			display: block;
+			margin-bottom: 20px;
+		}
+		input[type="email"] {
+			width: 270px;
+			height: 48px;
+			line-height: 48px;
+			padding-left: 25px;
+			font-size: 18px;
+			border:none;
+			border-top-left-radius: 32px;
+			border-bottom-left-radius: 32px;
+			background:url(../img/bg/email.png) no-repeat 90% bottom;
+			background-color:$color-white;	
+			box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.15);
+			@include breakpoint(phone) {
+				border-radius:32px;
+			}
+			&:focus {
+				outline: 0;
+			}	
+		}
+		input[type="submit"] {
+			height: 48px;
+			line-height: 48px;
+			border:none;
+			width: 145px;
+			background:$color-green;
+			color:$color-white;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $font-heading;
+			font-size: 18px;
+			@include font-shadow;
+			position: relative;
+			top:2px;
+			left:-4px;
+			border-top-right-radius: 32px;
+			border-bottom-right-radius: 32px;	
+			@include animate-fade;	
+			box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.15);
+			@include breakpoint(phone) {
+				border-radius:32px;
+				margin-top: 5px;
+				width: 180px;
+				left:0px;
+			}
+			&:hover {
+				cursor: pointer;
+				background:$color-pink;
+			}	
+		}
+		.social-icons {
+			text-align: center;
+			margin-top: 30px;
+			li {
+				display: inline-block;
+				a {
+					height: 36px;
+					line-height: 36px;
+					width: 36px;
+					text-align: center;
+					display: inline-block;
+					background:$color-green;
+					border-radius:100%;
+					color:$color-white;
+					@include font-shadow;
+					margin-right: 7px;
+					margin-left: 7px;
+					&:hover {
+						background:$color-pink;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Newsletter  ======*/
+
+/*===================================
+=            Page Footer            =
+===================================*/
+
+#page-footer {
+	padding-top: 60px;
+	background:url(../img/bg/footer.png) no-repeat bottom center;
+	background-color:#078290;
+	@include breakpoint(phone) {
+		padding-top: 0px;
+	}
+	.footer-box {
+		.title {
+			color:$color-white;
+			font-size: 18px;
+			text-transform: uppercase;
+			font-family: $font-heading;
+			@include font-shadow;
+			min-height: 60px;
+			display: block;
+			line-height: 120%;
+			@include breakpoint(tablet) {
+				font-size: 14px;
+				min-height: 40px;
+			}
+		}
+		ul {
+			li {
+				a {
+					color:$color-white;
+					font-size: 16px;
+					display: block;
+					padding-top: 8px;
+					padding-bottom: 8px;
+					@include font-shadow;
+					position: relative;
+					padding-left: 15px;
+					opacity: 0.8;
+					line-height: 18px;
+					@include breakpoint(laptop) {
+						font-size: 14px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 14px;
+					}
+					&:before {
+						@include font-ico;
+						content:'\f105';
+						color:#5ba659;
+						left:0px;
+						top:8px;
+						text-shadow: none;
+					}
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+	hr {
+		border-top:1px solid #07737d;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		@include breakpoint(phone) {
+			margin-top: 0px;
+			padding-top: 0px;
+		}
+	}
+	/* mobile footer nav */
+	#mobile-footer-nav {
+		.footer-title {
+			display: block;
+			width: 100%;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			font-size: 14px;
+			color:$color-white;
+			font-family: $font-heading;
+			line-height: 120%;
+			padding-left: 20px;
+			border-bottom:1px solid #07737d;
+			background:$color-blue;
+			position: relative;
+			padding-right: 40px;
+			&.ui-state-active {
+				&:after {
+					content:'\f106';
+				}
+			}
+			&:after {
+				@include font-ico;
+				right: 20px;
+				@include centre(y);
+				content:'\f107';
+			}
+			&:focus {
+				outline: 0;
+			}
+		}
+		.menu-content {
+			padding:20px;
+			background:#07737d;
+			ul {
+				li {
+					a {
+						color:$color-white;
+						font-size: 14px;
+						display: block;
+						padding-top: 5px;
+						padding-bottom: 5px;
+						position: relative;
+						padding-left: 15px;
+						line-height: 18px;
+						&:before {
+							@include font-ico;
+							content:'\f105';
+							color:$color-white;
+							left:0px;
+							top:6px;
+							text-shadow: none;
+						}						
+					}
+				}
+			}
+		}
+	}
+	/* copy bar */
+	#copy-bar {
+		border-top:1px solid #07737d;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		margin-top: 40px;
+		@include breakpoint(tablet) {
+			text-align: center;
+		}
+		@include breakpoint(phone) {
+			text-align: center;
+			margin-top: 0px;
+			border-top:0px;
+		}
+		.copy-notice {
+			small {
+				font-size: 14px;
+				color:$color-white;
+				@include font-shadow;
+				position: relative;
+				padding-right: 50px;
+				@include breakpoint(phone) {
+					padding-right: 0px;
+				}
+				img {
+					position: absolute;
+					top:-10px;
+					right:0px;
+					@include breakpoint(laptop) {
+						right: -55px;
+					}
+				}
+				.dms-ico {
+					@include breakpoint(phone) {
+						display: inline-block!important;
+						color:$color-white;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	/* footer cta */
+	.footer-cta {
+		text-align: right;
+		color:$color-white;
+		position: relative;
+		@include breakpoint(tablet) {
+			text-align: center;
+			padding-top: 20px;
+		}
+		@include breakpoint(phone) {
+			padding-top: 20px;
+			text-align: center;
+		}
+		small {
+			font-size: 14px;
+			padding-right: 130px;
+			@include breakpoint(tablet) {
+				padding-right: 20px;
+			}
+			@include breakpoint(phone) {
+				padding-right: 0px!important;
+				display: block;
+				padding-bottom: 10px;
+			}
+		}
+		a {
+			font-weight: $bold;
+			color:$color-white;
+		}
+		.careers-btn {
+			background:$color-green;
+			padding-left: 30px;
+			padding-right: 30px;
+			height: 30px;
+			line-height: 30px;
+			display: inline-block;
+			border-radius:32px;
+			position: absolute;
+			right: 0px;
+			top:-7px;
+			font-weight: $regular;
+			@include breakpoint(tablet) {
+				position: relative;
+				right: auto;
+				top:0px;
+			}
+			@include breakpoint(phone) {
+				position: relative;
+				right:auto;
+				margin-top: 15px;
+			}
+			&:hover {
+				background:$color-green-light;
+			}
+		}
+	}
+}
+
+/*=====  End of Page Footer  ======*/
+
+/*===================================
+=            Action Btns            =
+===================================*/
+
+#to-top-btn {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    display: none;
+    background: url(../img/ico/arrow-top.png) no-repeat center center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    margin-bottom: 20px;
+    background-color:$color-pink;
+    border-radius:100%;	
+    @include block-shadow;
+    @include breakpoint(tablet) {
+    	right: 7px;
+    	margin-bottom: 10px;
+    	width: 40px;
+    	height: 40px;
+    }
+}
+
+/*=====  End of Action Btns  ======*/
+
+/*================================
+=            Side Nav            =
+================================*/
+
+#side-nav {
+	position: fixed;
+	top:30%;
+	left:10px;
+	@include breakpoint(laptop) {
+		left:5px;
+	}
+	a {
+		width: 50px;
+		height: 50px;
+		border-radius:100%;
+		display: block;
+		line-height: 50px;
+		color:$color-white;
+		overflow: hidden;
+		margin-bottom: 15px;
+		padding-left: 18px;
+		box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.15);
+		text-transform: uppercase;
+		@include breakpoint(laptop) {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			padding-left: 12px;
+		}
+		span {
+			opacity: 0;
+			@include animate-fade;
+			font-size: 14px;
+			font-family: $font-heading;
+			@include font-shadow;
+		}
+		i {
+			@include font-shadow;	
+			width: 15px;		
+			text-align: center;
+			@include breakpoint(laptop) {
+			}
+		}
+		&.make-btn {
+			background:$color-pink;
+		}
+		&.login-btn {
+			background:$color-green;
+		}
+		&.location-btn {
+			background:$color-blue;
+		}
+		&:hover {
+			width: 230px;
+			border-radius:32px;
+			text-align: left;
+			padding-left: 20px;
+			span {
+				opacity: 1;
+			}
+			i {
+				margin-right: 8px;
+			}
+		}
+	}
+}
+
+#side-nav-mobile {
+	position: fixed;
+	bottom:50px;
+	right:10px;
+	@include breakpoint(phone) {
+		bottom:0px;
+	}
+	a {
+		width: 40px;
+		height: 40px;
+		border-radius:100%;
+		display: block;
+		line-height: 40px;
+		color:$color-white;
+		overflow: hidden;
+		margin-bottom: 15px;
+		padding-left: 13px;
+		box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.15);
+		@include breakpoint(phone) {
+			margin-bottom: 8px;
+		}
+		&.make-btn {
+			background:$color-pink;
+		}
+		&.login-btn {
+			background:$color-green;
+		}
+		&.location-btn {
+			background:$color-blue;
+		}			
+	}	
+}
+
+/*=====  End of Side Nav  ======*/
+
+/*====================================
+=            Location Map            =
+====================================*/
+
+#location-block {
+	background:$color-green;
+	.slider-nav {
+		.location-box {
+			text-align: center;
+			padding-bottom: 50px;
+			padding-left: 30px;
+			padding-right: 30px;
+			min-height: 200px;
+			padding-top: 50px;
+			@include breakpoint(tablet) {
+				min-height: 320px;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+			&:focus {
+				outline: 0;
+			}
+			&.slick-current {
+				background:$color-blue!important;
+			}
+			.location-title {
+				color:$color-white;
+				font-family: $font-heading;
+				font-size: 22px;
+				margin-bottom: 20px;
+				display: block;
+				position: relative;
+				@include font-shadow;
+				&:after {
+					display: block;
+					width: 50px;
+					height: 3px;
+					background:$color-white;
+					margin:0px auto;
+					content:'';
+					margin-top: 15px;
+				}
+			}
+		}
+		address {
+			color:$color-white;
+			opacity: 0.7;
+			line-height: 20px;
+			font-size: 16px;
+			font-style: normal;
+			margin-bottom: 20px;
+			font-family: $font-main;
+		}
+		p {
+			color:$color-white;
+			font-size: 16px;
+			margin-bottom: 10px;
+			i {
+				margin-right: 10px;
+			}
+			a {
+				color:$color-white;
+				font-weight: $bold;
+			}
+		}
+	}
+	.slider-for {
+		img {
+			@include breakpoint(phone) {
+				height: 350px;
+				object-fit: cover;
+			}
+			@include breakpoint(tablet) {
+				height: 350px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+/*=====  End of Location Map  ======*/
+
+.fancybox-title-over {
+	display:none!important;
+}

@@ -1,0 +1,580 @@
+/*===============================
+=            Top Bar            =
+===============================*/
+
+#top-bar {
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #f0f0f0;
+	@include breakpoint(phone) {
+		height: auto;
+	}
+	/* lang bar */
+	#lang-bar {
+		ul {
+			li {
+				a {
+					color:#8a8d94;
+					position: relative;
+					padding-left: 12px;
+					font-size: 14px;
+					@include breakpoint(laptop) {
+						font-size: 13px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 12px;
+					}
+					&:before {
+						@include font-ico;
+						content:'\f105';
+						color:$color-green;
+						left:0px;
+						@include centre(y);
+					}
+					&:hover {
+						color:$color-green;
+					}
+				}
+			}
+		}
+	}
+	/* info bar */
+	#info-bar {
+		text-align: right;
+		@include breakpoint(phone) {
+			text-align: center;
+		}
+		.patients-login-btn {
+			display: inline-block;
+			background: $color-green;
+			text-transform: uppercase;
+			color:$color-white;
+			height: 30px;
+			line-height: 30px;
+			border-radius:32px;
+			font-size: 14px;
+			padding-left: 25px;
+			padding-right: 25px;
+			position: relative;
+			@include breakpoint(laptop) {
+				font-size: 13px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 12px;
+			}
+			@include breakpoint(phone-xs) {
+				font-size: 12px;
+				height: 25px;
+				line-height: 25px;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			&:after {
+				@include arrow-btn;
+			}
+			&:hover {
+				background:$color-green-light;
+				&:after {
+					right: 10px;
+					opacity: 1;
+				}
+			}
+		}
+		/* actions */
+		.action-btns {
+			display: inline-block;
+			@include breakpoint(phone) {
+				display: inline-block;
+			}
+			li {
+				display: inline-block;
+				a {
+					color:$color-gray;
+					text-transform: uppercase;
+					font-size: 14px;
+					padding-right: 10px;
+					padding-left: 10px;
+					border-right: 1px dotted $color-gray;
+					@include breakpoint(laptop) {
+						font-size: 13px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 12px;
+					}
+					@include breakpoint(phone-xs) {
+						font-size: 12px;
+						padding-right: 7px;
+						padding-left: 7px;
+					}
+					&:hover {
+						color:$color-green;
+					}
+					i {
+						margin-right: 10px;
+						color:$color-green;
+						@include breakpoint(phone-xs) {
+							margin-right: 7px;
+						}
+					}
+				}
+				&:last-child {
+					a {
+						@include breakpoint(phone-xs) {
+							border:none;
+						}
+					}
+				}
+			}
+		}
+		/* socials */
+		small {
+			display: inline-block;
+			color:$color-gray;
+			font-size: 14px;
+			font-family: $font-heading;
+			padding-left: 11px;
+			padding-right: 11px;
+			font-weight: 600;
+			@include breakpoint(laptop) {
+				font-size: 13px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 13px;
+			}
+		}
+		.social-icons {
+			display: inline-block;
+			li {
+				display: inline-block;
+				a {
+					padding-left: 5px;
+					padding-right: 5px;
+					color:$color-green;
+					font-size: 14px;
+					@include breakpoint(laptop) {
+						font-size: 13px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 13px;
+					}
+					&:hover {
+						color:$color-green-light;
+					}
+				}
+				&:last-child {
+					a {
+						padding-right: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Top Bar  ======*/
+
+/*================================
+=            Main Bar            =
+================================*/
+
+#main-bar {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	@include breakpoint(laptop) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	@include breakpoint(tablet) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}	
+	/* brand gob */
+	#brand-box {
+		a {
+			img {
+				@include breakpoint(phone-xs) {
+					margin:0px auto;
+				}
+			}
+			&:hover {
+				img {
+					opacity: 0.7;
+					@include animate-fade;
+				}
+			}
+		}
+	}
+	/* main cta */
+	#main-cta {
+		text-align: right;
+		padding-top: 14px;
+		@include breakpoint(laptop) {
+			padding-top: 18px;
+		}
+		@include breakpoint(tablet) {
+			padding-top: 18px;
+		}
+		@include breakpoint(phone) {
+			text-align: center;
+		}
+		p {
+			display: inline-block;
+			font-size: 24px;
+			color:$color-pink;
+			font-family: $font-heading;
+			font-weight: $bold;
+			margin-right: 25px;
+			height: 47px;
+			line-height: 47px;
+			position: relative;
+			top:2px;
+			@include breakpoint(laptop) {
+				font-size: 18px;
+				margin-right: 10px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 18px;	
+				margin-right: 5px;
+			}
+			@include breakpoint(phone-xs) {
+				font-size: 20px;
+				margin-right: 5px;
+
+			}
+			a {
+				color:$color-gray;
+				font-family: $font-main;
+			}
+			i {
+				font-size: 30px;
+				border:3px solid $color-pink;
+				border-radius:100%;
+				height: 46px;
+				line-height: 42px;
+				width: 46px;
+				text-align: center;
+				display: inline-block;
+				margin-left: 10px;
+				margin-right: 10px;
+				position: relative;
+				top:4px;
+				@include breakpoint(laptop) {
+					height: 36px;
+					line-height: 32px;
+					width: 36px;
+					font-size: 20px;
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+				@include breakpoint(tablet) {
+					width: 38px;
+					height: 38px;
+					line-height: 34px;
+					font-size: 24px;
+					margin-right: 5px;
+					margin-left: 5px;
+				}
+				@include breakpoint(phone-xs) {
+					height: 36px;
+					line-height: 32px;
+					width: 36px;
+					font-size: 20px;
+					margin-left: 5px;
+					margin-right: 5px;
+					top:1px;
+				}
+			}
+		}
+		.make-app-btn {
+			display: inline-block;
+			text-transform: uppercase;
+			color:$color-white;
+			font-family: $font-heading;
+			font-weight: $bold;
+			font-size: 16px;
+			border-radius:32px;
+			height: 47px;
+			line-height: 47px;
+			background:$color-pink;
+			padding-left: 35px;
+			padding-right: 35px;
+			@include font-shadow;
+			@include pink-grad;
+			position: relative;
+			@include breakpoint(laptop) {
+				font-size: 14px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 14px;
+				padding-right: 25px;
+				padding-left: 25px;
+			}
+			@include breakpoint(phone-xs) {
+				margin-top: 15px;
+			}
+			&:after {
+				@include arrow-btn;
+				right: 25px;
+			}
+			&:hover {
+				&:after {
+					opacity: 1;
+					right:17px;
+				}
+			}
+		}
+	}
+	/* oqra box */
+	#oqra-box {
+		text-align: right;
+		padding-top: 17px;
+		@include breakpoint(laptop) {
+			padding-top: 15px;
+		}
+		img {
+			float: right;
+		}
+	}
+}
+
+/*=====  End of Main Bar  ======*/
+
+/*================================
+=            Menu Bar            =
+================================*/
+
+#menu-bar {
+	height:55px;
+	background:$color-blue;
+	@include breakpoint(tablet) {
+		height: 50px;
+	}
+}
+
+/*=====  End of Menu Bar  ======*/
+
+/*========================================
+=            Mobile Menu bar             =
+========================================*/
+
+#mobile-menu-bar {
+	height:50px;
+	background:$color-blue;	
+	#lang-bar {
+		height: 50px;
+		line-height: 50px;
+		ul {
+			li {
+				a {
+					color:$color-white;
+					font-size: 14px;
+					position: relative;
+					padding-left: 12px;
+					&:before {
+						@include font-ico;
+						content:'\f105';
+						color:$color-white;
+						left:0px;
+						@include centre(y);
+					}					
+				}
+			}
+		}
+	}
+	#menu-btn {
+		text-align: right;
+		.menu-btn {
+			display: block;
+			height: 19px;
+			padding-top: 12px;
+			float: right;
+			span {
+				width: 32px;
+			    height: 4px;
+			    background: #fff;
+			    display: block;
+			    margin-bottom: 7px;
+			    @include animate-fade;
+			    &:last-child {
+			    	margin-bottom: 0px;
+			    }
+			}
+			&.open {
+				span:nth-child(2) {
+					display: none!important;
+				}
+				span:first-child {
+					transform: rotate(45deg);
+					position: relative;
+					top:11px;
+					left:0px;
+				}
+				span.last-span {
+					transform: rotate(-45deg);
+					position: relative;
+					top:0px;
+				}
+			}
+		}		
+	}
+}
+
+/*=====  End of Mobile Menu bar   ======*/
+
+/*====================================
+=            Inner Header            =
+====================================*/
+
+#inner-header {
+	height:255px;
+	position: relative;
+	@include breakpoint(tablet) {
+		height: 200px;
+	}
+	@include breakpoint(phone) {
+		height: 200px;
+	}
+	.header-overlay {
+		position: absolute;
+		top:0px;
+		left:0px;
+		width: 100%;
+		height: 100%;
+		background:rgba(7,130,144,0.3);
+	}
+	.container {
+		height: 100%;
+		position: relative;
+		.header-caption {
+			@include centre(y);
+			h1 {
+				font-size: 48px;
+				color:$color-white;
+				@include font-shadow;
+				@include breakpoint(laptop) {
+					font-size: 46px;
+				}
+				@include breakpoint(tablet) {
+					font-size: 42px;
+				}
+				@include breakpoint(phone) {
+					font-size: 38px;
+				}
+			}
+			.title {
+				font-size: 48px;
+				color:$color-white;
+				display: block;
+				@include font-shadow;
+				@include breakpoint(laptop) {
+					font-size: 46px;
+				}
+				@include breakpoint(tablet) {
+					font-size: 40px;
+				}
+				@include breakpoint(phone) {
+					font-size: 36px;
+				}			
+			}
+			h2 {
+				color:$color-white;
+				font-size: 20px;
+				font-weight: $bold;
+				margin-top: 10px;
+				@include font-shadow;
+			}
+		}
+	}
+}
+
+/*=====  End of Inner Header  ======*/
+
+/*==================================
+=            Filter Bar            =
+==================================*/
+
+#filter-bar {
+	background:$color-green;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	@include breakpoint(phone) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.search-filter {
+		span {
+			color:$color-white;
+			font-size: 16px;
+			text-transform: uppercase;
+			font-weight: $bold;
+			margin-right: 15px;
+			@include breakpoint(tablet) {
+				font-size: 14px;
+				margin-right: 10px;
+			}
+			@include breakpoint(phone) {
+				margin-right: 0px;
+			}
+		}
+		ul {
+			display: inline-block;
+			@include breakpoint(phone) {
+				margin-top: 10px;
+				display: block;
+			}
+			li {
+				display: inline-block;
+				a {
+					color:$color-white;
+					font-size: 16px;
+					padding-left: 10px;
+					padding-right: 10px;
+					position: relative;
+					@include breakpoint(tablet) {
+						font-size: 14px;
+					}
+					@include breakpoint(phone) {
+						font-size: 14px;
+						padding-right: 5px;
+						padding-left: 5px;
+					}
+					&:hover {
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+	}
+	.results-box {
+		text-align: right;
+		font-size: 16px;
+		color:$color-white;
+		font-size: 16px;
+		@include breakpoint(phone) {
+			text-align: center;
+			padding-top: 15px;
+		}
+		@include breakpoint(tablet) {
+			font-size: 14px;
+		}
+		span {
+			text-transform: uppercase;
+			color:$color-white;
+			font-size: 16px;
+			@include breakpoint(tablet) {
+				font-size: 14px;
+			}
+		}
+		small {
+			font-size: 16px;
+			@include breakpoint(tablet) {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+/*=====  End of Filter Bar  ======*/
+

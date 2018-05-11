@@ -1,0 +1,1181 @@
+/*==================================
+=            Mas header            =
+==================================*/
+
+#mas-header {
+	position: relative;
+	.top-slider {
+		.item {
+			.slider-item {
+				height: 530px;
+				background:#000;
+				@include breakpoint(laptop) {
+					height: 450px;
+				}
+				@include breakpoint(tablet) {
+					height: 350px;
+				}
+				@include breakpoint(phone) {
+					height: 350px;
+				}
+				.container {
+					height: 100%;
+					.slider-caption {
+						@include centre(y);
+					}
+				}
+			}
+		}
+	}
+	/* form */
+	#form-wrapper {
+		position: absolute;
+		top:100px;
+		width: 100%;
+		height: 100%;
+		@include breakpoint(laptop) {
+			top:30px;
+		}
+		@include breakpoint(tablet) {
+			top:20px;
+		}
+		.form-box {
+			float: right;
+			width: 370px;
+			min-height: 500px;
+			background: rgba(239,82,116,1);
+			background: -moz-linear-gradient(left, rgba(239,82,116,1) 0%, rgba(190,72,98,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(239,82,116,1)), color-stop(100%, rgba(190,72,98,1)));
+			background: -webkit-linear-gradient(left, rgba(239,82,116,1) 0%, rgba(190,72,98,1) 100%);
+			background: -o-linear-gradient(left, rgba(239,82,116,1) 0%, rgba(190,72,98,1) 100%);
+			background: -ms-linear-gradient(left, rgba(239,82,116,1) 0%, rgba(190,72,98,1) 100%);
+			background: linear-gradient(to right, rgba(239,82,116,1) 0%, rgba(190,72,98,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef5274', endColorstr='#be4862', GradientType=1 );
+			border-radius:9px;
+			@include breakpoint(laptop) {
+				width: 340px;
+			}
+			@include breakpoint(tablet) {
+				width: 300px;
+				padding-bottom: 0px;
+				min-height: 430px;
+			}
+			header {
+				text-align: center;
+				height: 80px;
+				text-align: center;
+				line-height: 80px;
+				@include pink-grad;
+				border-top-left-radius: 9px;
+				border-top-right-radius: 9px;
+				@include breakpoint(tablet) {
+					height: 60px;
+					line-height: 60px;
+				}				
+				.title {
+					color:$color-white;
+					font-size: 24px;
+					font-weight: $bold;
+					font-family: $font-heading;
+					display: block;
+					@include font-shadow;
+					@include breakpoint(laptop) {
+						font-size: 22px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 20px;
+					}
+				}
+			}
+			#form-shadow {
+				width: 100%;
+				height: 40px;
+				background:url(../img/bg/form-shadow.png) no-repeat;
+			}
+			.form-content {
+				padding-left: 27px;
+				padding-right: 27px;
+				input[type="text"], input[type="email"] , input[type="tel"]  {
+					width: 100%;
+					height: 40px;
+					line-height: 40px;
+					padding-left: 20px;
+					border-radius:12px;
+					border:1px solid #cfe9a4;
+					margin-bottom: 10px;
+					font-size: 16px;
+					&:focus {
+						outline: 0;
+					}
+				}
+
+
+				.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+					width: 100%;
+					height: 40px;
+					border-radius:12px;
+					&:focus {
+						outline: 0;
+						background:$color-white;
+					}
+					&:hover {
+						background:$color-white;
+					}					
+					@include breakpoint(phone) {
+						width: 100%;
+					}
+				}
+				.btn {
+					height: 40px;
+					border-radius:0px;
+					font-size: 16px;
+					color:#353535;
+					border:none;
+					border-radius:12px;
+					padding-left: 20px;
+					margin-bottom: 10px;
+					border:1px solid #cfe9a4;
+					&:focus {
+						outline: 0;
+						background:$color-white;
+					}
+					&:hover {
+						background:$color-white;
+					}
+				}
+				button {
+					&:focus {
+						outline: 0!important;
+						box-shadow:none;
+					}		
+					&:hover {
+						background:none;
+					}	
+				}
+				div.open {
+					.caret {
+						background:$color-green;
+						&:after {
+							color:$color-white;
+						}
+					}
+				}
+				.btn-group {
+					width: 100%;
+				}
+				.caret {
+					background:url(../img/ico/gray-down.jpg) no-repeat center center;
+					width: 38px;
+					height: 38px;
+					border:none;
+					background:$color-white;
+					top:2px;
+					right: 0px;
+					@include animate-fade;
+					border-top-right-radius: 12px;
+					border-bottom-right-radius: 12px;	
+					border-left:1px solid #cfe9a4;
+					&:after {
+						@include font-ico;
+						@include centre(y);
+						content:'\f107';
+						left:40%;
+					}				
+				}		
+				.btn-group.open .dropdown-toggle {
+					box-shadow:none!important;
+					background:$color-white!important;
+				}		
+				.btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.btn-default.dropdown-toggle {
+					background:none;
+					background:$color-white!important;
+				}		
+				.dropdown-menu {
+					padding:5px;
+					box-shadow:none;
+					margin:0px;
+					margin-top: -5px;
+					li {
+						a {
+							font-size: 14px;
+							color:$color-black;
+							padding:5px;
+							&:hover {
+							}
+						}
+					}
+				}
+
+				input[type="submit"] {
+					width: 100%;
+					font-size: 22px;
+					text-transform: uppercase;
+					color:$color-white;
+					font-family: $font-heading;
+					font-weight: $bold;
+					text-align: center;
+					border-radius:46px;
+					border:none;
+					margin-top: 15px;
+					display: block;
+					height: 86px;
+					line-height: 86px;
+					background: rgba(107,173,77,1);
+					background: -moz-linear-gradient(left, rgba(107,173,77,1) 0%, rgba(120,189,88,1) 100%);
+					background: -webkit-gradient(left top, right top, color-stop(0%, rgba(107,173,77,1)), color-stop(100%, rgba(120,189,88,1)));
+					background: -webkit-linear-gradient(left, rgba(107,173,77,1) 0%, rgba(120,189,88,1) 100%);
+					background: -o-linear-gradient(left, rgba(107,173,77,1) 0%, rgba(120,189,88,1) 100%);
+					background: -ms-linear-gradient(left, rgba(107,173,77,1) 0%, rgba(120,189,88,1) 100%);
+					background: linear-gradient(to right, rgba(107,173,77,1) 0%, rgba(120,189,88,1) 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bad4d', endColorstr='#78bd58', GradientType=1 );
+					@include font-shadow;
+					@include breakpoint(laptop) {
+						font-size: 20px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 16px;
+						height: 60px;
+						line-height: 60px;
+						margin-top: 5px;
+					}
+					&:hover {
+						cursor: pointer;
+						background:$color-green;
+					}
+					&:focus {
+						outline: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Mas header  ======*/
+
+/*===================================
+=            Get Started            =
+===================================*/
+
+#get-started-block {
+	background:#fef2f4;
+	padding-top: 50px;
+	padding-bottom: 80px;
+	@include breakpoint(phone) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	header {
+		margin-bottom: 40px;
+		.title {
+			font-size: 30px;
+			color:$color-green;
+			font-family: $font-heading;
+			position: relative;
+			&:after {
+				display: block;
+				content:'';
+				width: 70px;
+				height: 4px;
+				background:$color-pink;
+				margin-top: 12px;
+			}
+		}
+	}
+	/* started box */
+	.started-box {
+		position: relative;
+		overflow: hidden;
+		border-radius:6px;
+		box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.15);
+		@include breakpoint(tablet) {
+			margin-bottom: 30px;
+		}
+		@include breakpoint(phone) {
+			margin-bottom: 30px;
+		}
+		&:hover {
+			.box-caption {
+				height: 220px!important;
+				@include pink-grad-trans;
+			}			
+		}
+		img {
+			width: 100%;
+			@include animate-fade;
+			border-radius:6px;
+		}
+		.box-caption {
+			position: absolute;
+			bottom:0px;
+			width: 100%;
+			text-align: center;
+			height: 60px;
+			color:$color-white;
+			@include pink-grad;
+			border-bottom-right-radius: 6px;
+			border-bottom-left-radius: 6px;		
+			@include animate-fade;	
+			.title {
+				display: block;
+				font-size: 24px;
+				font-family: $font-heading;
+				line-height: 60px;
+				@include font-shadow;
+				color:$color-white;
+				@include breakpoint(desktop) {
+					font-size: 22px;
+				}
+				@include breakpoint(laptop) {
+					font-size: 20px;
+				}
+				@include breakpoint(phone) {
+					font-size: 22px;
+				}
+			}
+			p {
+				color:$color-white;
+				font-size: 16px;
+				line-height: 20px;
+				@include font-shadow;
+				padding:20px;
+				padding-top: 0px;
+				@include breakpoint(desktop) {
+					font-size: 15px;
+					padding:15px;
+					padding-top: 0px;
+				}
+				@include breakpoint(laptop) {
+					font-size: 14px;
+					line-height: 18px;
+					padding:10px;
+					padding-top: 0px;
+				}
+			}
+			span.read-btn {
+				display: inline-block;
+				font-size: 16px;
+				color:$color-white;
+				@include font-shadow;
+				font-family: $font-heading;
+				width: 130px;
+				text-align: center;
+				border-radius:32px;
+				height: 35px;
+				line-height: 33px;
+				border:1px solid rgba(255,255,255,0.3);
+				@include animate-fade;
+				@include breakpoint(laptop) {
+					width: 110px;
+					font-size: 14px;
+					height: 30px;
+					line-height: 28px;
+				}
+				i {
+					margin-left: 7px;
+					@include animate-fade;
+					position: relative;
+					left:0px;
+				}
+				&:hover {
+					background:$color-white;
+					color:$color-pink;
+					i {
+						position: relative;
+						left:5px;
+					}
+				}
+			}
+		}
+		a {
+			display: block;
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}		
+	}
+}
+
+/*=====  End of Get Started  ======*/
+
+/*===================================
+=            Intro Block            =
+===================================*/
+
+.intro-block {
+	&:before {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 16px 31.5px 0 31.5px;
+		border-color: #fef2f4 transparent transparent transparent;
+		content:'';
+		@include centre(x);
+	}
+	.container {
+		height: 100%;
+		position: relative;
+	}
+	header {
+		text-align: center;
+		color:$color-white;
+		padding-top: 80px;
+		margin-bottom: 70px;
+		@include breakpoint(tablet) {
+			padding-top: 50px;
+			margin-bottom: 10px;
+		}
+		@include breakpoint(phone) {
+			padding-top: 50px;
+			margin-bottom: 40px;
+		}
+		h1 {
+			font-size: 36px;
+			@include font-shadow;
+			@include breakpoint(laptop) {
+				font-size: 34px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 32px;
+				max-width: 500px;
+				margin:0px auto;
+			}
+			@include breakpoint(phone) {
+				font-size: 30px;
+				line-height: 110%;
+			}
+		}
+	}
+	.image-bottom {
+		position: absolute;
+		left:120px;
+		bottom:0px;
+		@include breakpoint(desktop) {
+			left:50px;
+		}
+		@include breakpoint(laptop) {
+			left:0px;
+			width: 400px;
+		}
+		@include breakpoint(tablet) {
+			left:0px;
+			width: 350px;
+		}
+		@include breakpoint(phone) {
+			display: none;
+		}
+	}
+	/* content */
+	.intro-content {
+		float: right;
+		width: 55%;
+		padding-right: 120px;
+		@include breakpoint(desktop) {
+			padding-right: 90px;
+		}
+		@include breakpoint(laptop) {
+			padding-right: 0px;
+		}
+		@include breakpoint(tablet) {
+			padding-right: 0px;
+			padding-left: 20px;
+			padding-top: 30px;
+		}
+		@include breakpoint(phone) {
+			padding:0px;
+			width: 100%;
+			padding-top: 0px;
+			padding-bottom: 40px;
+		}
+		p {
+			@include regular-text;
+		}
+		.read-btn {
+			@include read-btn;
+			margin-top: 35px;
+		}
+	}
+}
+
+/*=====  End of Intro Block  ======*/
+
+/*=================================================
+=            White Block womens health            =
+=================================================*/
+
+#white-block {
+	background:$color-white;
+	padding-top: 80px;
+	position: relative;
+	@include breakpoint(phone) {
+		padding-top: 40px;
+	}
+	&:before {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 16px 31.5px 0 31.5px;
+		border-color: #6bad4d transparent transparent transparent;
+		content:'';
+		@include centre(x);
+		top:0px;
+	}	
+	.container {
+		height: 100%;
+		position: relative;
+		.image-bottom {
+			position: absolute;
+			bottom:0px;
+			right: 0px;
+			@include breakpoint(tablet) {
+				width: 300px;
+			}
+			@include breakpoint(phone) {
+				display: none;
+			}
+		}
+		.half-content {
+			width: 55%;
+			padding-bottom: 60px;
+			@include breakpoint(phone) {
+				width: 100%;
+			}
+			h2 {
+				font-size: 36px;
+				color:$color-green;
+				margin-bottom: 40px;
+				line-height: 120%;
+				@include breakpoint(laptop) {
+					font-size: 30px;
+				}
+				@include breakpoint(tablet) {
+					font-size: 30px;
+				}
+				@include breakpoint(phone) {
+					font-size: 30px;
+					line-height: 110%;
+				}
+			}
+			p {
+				@include regular-text;
+				color:$color-gray;
+				margin-bottom: 30px;
+				text-shadow: none;
+			}
+			.read-btn {
+				@include read-btn;
+			}			
+		}
+	}
+}
+
+/*=====  End of White Block womens health  ======*/
+
+/*==================================
+=            Pink Block            =
+==================================*/
+
+#pink-block {
+	height:500px;
+	position: relative;
+	@include breakpoint(phone) {
+		height: auto;
+	}
+	&:before {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 16px 31.5px 0 31.5px;
+		border-color: #ffffff transparent transparent transparent;
+		content:'';
+		@include centre(x);
+		top:0px;
+		z-index: 999;
+	}		
+	.image-holder {
+		float: left;
+		width: 50%;
+		height: 100%;
+		@include breakpoint(phone) {
+			width: 100%;
+			float: none;
+		}
+		img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+	}
+	.half-content {
+		float: right;
+		width: 50%;
+		height: 100%;
+		position: relative;
+		@include pink-grad-light;
+		@include breakpoint(phone) {
+			width: 100%;
+			float: none;
+			padding:25px;
+		}
+		.main-content {
+			@include centre(both);
+			text-align: center;
+			color:$color-white;
+			@include breakpoint(desktop) {
+				width: 70%;
+			}
+			@include breakpoint(laptop) {
+				width: 90%;
+			}
+			@include breakpoint(tablet) {
+				width: 90%;
+			}
+			@include breakpoint(phone) {
+				width: 100%;
+				@include reset-pos;
+			}
+			h3 {
+				font-size: 30px;
+				line-height: 120%;
+				@include font-shadow;
+				margin-bottom: 40px;
+				@include breakpoint(laptop) {
+					margin-bottom: 30px;
+					font-size: 26px;
+				}
+				@include breakpoint(tablet) {
+					margin-bottom: 30px;
+					font-size: 24px;
+				}
+				@include breakpoint(phone) {
+					font-size: 24px;
+					line-height: 110%;
+				}
+			}
+			p {
+				@include regular-text;
+				text-align: left;
+			}
+		}
+		.read-btn {
+			margin-top: 40px;
+			display: inline-block;
+			height: 41px;
+			line-height: 41px;
+			font-size: 16px;
+			color:$color-gray;
+			padding-left: 30px;
+			padding-right: 20px;
+			background: rgba(255,255,255,1);
+			background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(248,195,208,1)));
+			background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%);
+			background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%);
+			background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%);
+			background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8c3d0', GradientType=1 );	
+			border-radius:32px;	
+			@include breakpoint(phone) {
+				font-size: 14px;
+			}	
+			&:hover {
+				i {
+					position: relative;
+					left:5px;
+					color:$color-gray;
+				}
+			}
+			i {
+				margin-left: 15px;
+				position: relative;
+				left:0px;
+				color:$color-white;
+				@include font-shadow;
+				@include animate-fade;
+				@include breakpoint(phone) {
+					margin-left: 3px;
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Pink Block  ======*/
+
+/*==================================
+=            Green Block           =
+==================================*/
+
+#green-block {
+	height:500px;
+	position: relative;
+	@include breakpoint(phone) {
+		height: auto;
+	}	
+	.image-holder {
+		float: right;
+		width: 50%;
+		height: 100%;
+		@include breakpoint(phone) {
+			width: 100%;
+			float: none;
+		}
+		img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+	}
+	.half-content {
+		float: left;
+		width: 50%;
+		height: 100%;
+		position: relative;
+		@include green-grad-light;
+		@include breakpoint(phone) {
+			width: 100%;
+			float: none;
+			padding:25px;
+		}
+		.main-content {
+			@include centre(both);
+			text-align: center;
+			color:$color-white;
+			@include breakpoint(desktop) {
+				width: 70%;
+			}
+			@include breakpoint(laptop) {
+				width: 90%;
+			}
+			@include breakpoint(tablet) {
+				width: 90%;
+			}
+			@include breakpoint(phone) {
+				width: 100%;
+				@include reset-pos;
+			}
+			h3 {
+				font-size: 30px;
+				line-height: 120%;
+				@include font-shadow;
+				margin-bottom: 40px;
+				@include breakpoint(laptop) {
+					margin-bottom: 30px;
+					font-size: 26px;
+				}
+				@include breakpoint(tablet) {
+					margin-bottom: 30px;
+					font-size: 24px;
+				}
+				@include breakpoint(phone) {
+					font-size: 24px;
+					line-height: 110%;
+				}
+			}
+			p {
+				@include regular-text;
+				text-align: left;
+			}
+		}
+		.read-btn {
+			margin-top: 40px;
+			display: inline-block;
+			height: 41px;
+			line-height: 41px;
+			font-size: 16px;
+			color:$color-gray;
+			padding-left: 30px;
+			padding-right: 20px;
+			background: rgba(255,255,255,1);
+			background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(205,246,187,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(205,246,187,1)));
+			background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(205,246,187,1) 100%);
+			background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(205,246,187,1) 100%);
+			background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(205,246,187,1) 100%);
+			background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(205,246,187,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cdf6bb', GradientType=1 );
+			border-radius:32px;	
+			@include breakpoint(phone) {
+				font-size: 14px;
+			}	
+			&:hover {
+				i {
+					position: relative;
+					left:5px;
+					color:$color-gray;
+				}
+			}
+			i {
+				margin-left: 15px;
+				position: relative;
+				left:0px;
+				color:$color-green;
+				@include font-shadow;
+				@include animate-fade;
+				@include breakpoint(phone) {
+					margin-left: 3px;
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Pink Block  ======*/
+
+/*===================================
+=            Video Block            =
+===================================*/
+
+#video-block {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	#video-content {
+		@include breakpoint(tablet) {
+			text-align: center;
+		}
+		h4 {
+			font-size: 36px;
+			color:$color-pink;
+			margin-bottom: 40px;
+			@include breakpoint(laptop) {
+				font-size: 32px;
+			}
+		}
+		p {
+			@include regular-text;
+			color:$color-gray;
+			padding-right: 100px;
+			margin-bottom: 40px;
+			text-shadow: none;
+			@include breakpoint(laptop) {
+				margin-bottom: 30px;
+				padding-right: 30px;
+			}
+			@include breakpoint(tablet) {
+				padding-right: 0px;
+				margin-bottom: 30px;
+			}
+			@include breakpoint(phone) {
+				padding-right: 0px;
+			}
+		}
+	}
+	#video-box {
+		position: relative;
+		overflow: hidden;
+		border-radius:6px;
+		@include breakpoint(tablet) {
+			margin-top: 30px;
+		}
+		@include breakpoint(phone) {
+			margin-top: 30px;
+		}
+		&:hover {
+			a {
+				background:rgba(0,0,0,0.65);
+				span {
+					border:7px solid $color-pink;
+				}
+			}
+			img {
+				transform: scale(1.1);
+			}
+		}
+		img {
+			width: 100%;
+			@include animate-fade;
+			border-radius:6px;
+			@include breakpoint(laptop) {
+				height: 300px;
+				object-fit: cover;
+			}
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0px;
+			left:0px;
+			background:rgba(0,0,0,0.35);
+			border-radius:6px;
+			span {
+				@include centre(both);
+				width: 60px;
+				height: 60px;
+				background:$color-pink;
+				display: block;
+				border-radius:100%;
+				border:7px solid $color-green;
+				@include animate-fade;
+				&:after {
+					content:'\f04b';
+					@include font-ico;
+					color:$color-white;
+					text-align: center;
+					@include centre(both);
+					@include font-shadow;
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Video Block  ======*/
+
+/*=====================================
+=            Reviews Block            =
+=====================================*/
+
+.reviews-block {
+	position: relative;
+	.paralax-overlay {
+		background:rgba(7,130,144, 0.7);
+		position: absolute;
+		top:0px;
+		left:0px;
+		width: 100%;
+		height: 100%;
+	}
+	iframe {
+		position: relative;
+	}
+	header {
+		text-align: center;
+		position: relative;
+		z-index: 99;
+		padding-top: 75px;
+		padding-bottom: 75px;
+		color:$color-white;
+		.title {
+			font-size: 36px;
+			font-family: $font-heading;
+			@include font-shadow;
+			@include breakpoint(laptop) {
+				font-size: 32px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 30px;
+
+			}
+			@include breakpoint(phone) {
+				font-size: 28px;
+			}
+		}
+	}
+}
+
+/*=====  End of Reviews Block  ======*/
+
+/*===================================
+=            Caring Show            =
+===================================*/
+
+#caring-block {
+	background:#fef2f4;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	@include breakpoint(phone) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	header {
+		text-align: center;
+		padding-bottom: 50px;
+		@include breakpoint(phone) {
+			padding-bottom: 30px;
+		}
+		h5 {
+			font-size: 36px;
+			color:$color-pink;
+			@include breakpoint(laptop) {
+				font-size: 32px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 30px;
+
+			}
+			@include breakpoint(phone) {
+				font-size: 28px;
+			}			
+		}
+	}
+	/* caring box */
+	.caring-box {
+		border-radius:6px;
+		padding-bottom: 25px;
+		box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.15);
+		@include breakpoint(phone) {
+			margin-bottom: 15px;
+		}
+		header {
+			height: 70px;
+			line-height: 70px;
+			color:$color-white;
+			text-align: left;
+			padding-left: 25px;
+			padding-right: 25px;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+			margin-bottom: 30px;
+			@include breakpoint(phone) {
+				height: 50px;
+				line-height: 50px;
+			}
+			.title {
+				font-size: 24px;
+				font-family: $font-heading;
+				@include font-shadow;
+				@include breakpoint(laptop) {
+					font-size: 22px;
+				}
+				@include breakpoint(phone) {
+					font-size: 20px;
+				}
+			}
+		}
+		.caring-slider {
+			padding-left: 23px;
+			padding-right: 23px;
+			@include breakpoint(laptop) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			.slider-item {
+				.image-holder {
+					height: 190px;
+					margin-bottom: 20px;
+					position: relative;
+					img {
+						width: 100%;
+						height: 190px;
+						object-fit: cover;
+						border-radius:6px;
+					}
+					.image-opacity {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top:0px;
+						left:0px;
+						background:rgba(7,130,144, 0.3);
+						border-radius:6px;
+						opacity: 0;
+						@include animate-fade;
+						a {
+							display: block;
+							width: 100%;
+							height: 100%;
+							border-radius:6px;
+							background:url(../img/ico/plus.png) no-repeat center center;
+						}
+					}
+				}
+				article {
+					&:hover {
+						.image-opacity {
+							opacity: 1;
+						}
+					}
+					.title {
+						font-size: 24px;
+						color:$color-white;
+						@include font-shadow;
+						font-family: $font-heading;
+						line-height: 120%;
+						display: block;
+						height: 100px;
+						@include breakpoint(laptop) {
+							font-size: 20px;
+						}
+						@include breakpoint(tablet) {
+							font-size: 22px;
+						}
+						@include breakpoint(phone) {
+							font-size: 20px;
+							height: auto;
+							padding-bottom: 20px;
+						}
+						a {
+							color:$color-white;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+					.read-btn {
+						@include read-btn;
+					}
+				}
+			}
+		}		
+		&.news-box {
+			@include green-grad;
+		}
+		&.social-box {
+			background:$color-blue;
+			.social-feed {
+				padding-left: 23px;
+				padding-right: 23px;
+				height: 310px;
+				@include breakpoint(phone) {
+					height: auto;
+				}
+				ul {
+					li {
+						display: block;
+						padding-top: 12px;
+						padding-bottom: 12px;	
+						border-bottom:1px solid rgba(0,0,0,0.1);							
+						&:first-child {
+							padding-top: 0px;
+						}	
+						a {
+							color:$color-white;
+							font-size: 16px;
+							line-height: 22px;
+							display: block;
+							background:url(../img/ico/bullet.png) no-repeat 0px 7px;	
+							padding-left: 20px;		
+							@include breakpoint(laptop) {
+								font-size: 14px;
+								line-height: 18px;
+							}														
+							&:hover {
+								opacity: 0.5;
+							}
+							span {
+								display: block;
+								font-weight: $bold;
+							}
+						}
+					}
+				}
+			}
+			.read-btn {
+				@include read-btn;
+				margin-left: 23px;
+				@include green-grad;
+				@include breakpoint(phone) {
+					margin-top: 30px;
+				}
+			}			
+		}
+		&.blog-box {
+			@include pink-grad;
+			.read-btn {
+				color:$color-gray!important;
+				background: rgba(255,255,255,1)!important;
+				background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%)!important;
+				background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(248,195,208,1)))!important;
+				background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%)!important;
+				background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%)!important;
+				background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%)!important;
+				background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(248,195,208,1) 100%)!important;
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8c3d0', GradientType=1 )!important;			
+			}
+		}
+	}
+}
+
+/*=====  End of Caring Show  ======*/

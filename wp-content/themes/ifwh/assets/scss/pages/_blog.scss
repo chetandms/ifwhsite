@@ -1,0 +1,765 @@
+/*====================================
+=            Blog Wrapper            =
+====================================*/
+
+#blog-wrapper {
+	background:#eaecf0;
+	padding-bottom: 60px;
+	/* blog left */
+	#blog-left {
+		.blog-box {
+			background:$color-white;
+			padding-top: 50px;
+			box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15); 
+			margin-bottom: 30px;
+			@include breakpoint(laptop) {
+				margin-bottom: 20px;
+				padding-top: 30px;
+			}
+			@include breakpoint(tablet) {
+				margin-bottom: 20px;
+				padding-top: 25px;
+			}
+			@include breakpoint(phone-xs) {
+				margin-bottom: 20px;
+				padding-top: 20px;
+			}
+			.blog-content {
+				padding-left: 35px;
+				padding-right: 35px;
+				padding-bottom: 50px;
+				@include breakpoint(laptop) {
+					padding-left: 30px;
+					padding-right: 30px;
+					padding-bottom: 40px;
+				}
+				@include breakpoint(tablet) {
+					padding-left: 25px;
+					padding-right: 25px;
+					padding-bottom: 30px;
+				}
+				@include breakpoint(phone-xs) {
+					padding-left: 20px;
+					padding-right: 20px;
+					padding-bottom: 20px;
+				}
+				.featured-blog-image {
+					width: 100%;
+					margin-bottom: 25px;
+					padding:10px;
+					box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2); 
+				}
+				h3 {
+					font-size: 24px;
+					font-weight: $regular;
+					line-height: 120%;
+					margin-bottom: 25px;
+					@include breakpoint(laptop) {
+						font-size: 22px;
+						margin-bottom: 20px;
+					}
+					@include breakpoint(tablet) {
+						margin-bottom: 20px;
+						font-size: 22px;
+					}
+					@include breakpoint(phone-xs) {
+						margin-bottom: 15px;
+						font-size: 20px;
+					}
+					a {
+						color:$color-green;
+						&:hover {
+							color:$color-pink;
+						}
+					}
+				}
+			}
+			p {
+				@include regular-text;
+				color:$color-gray;
+				margin-bottom: 15px;
+				text-shadow: none;
+			}
+			a.read-btn {
+				@include read-btn;
+				margin-top: 20px;
+			}
+			footer {
+				background:$color-green;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				padding-left: 15px;
+				@include breakpoint(phone) {
+					text-align: center;
+					padding-left: 0px;
+				}
+				#blog-author {
+					small {
+						color:$color-white;
+						font-size: 14px;
+						@include font-shadow;
+					}
+				}
+				#blog-share {
+					text-align: right;
+					padding-right: 30px;
+					@include breakpoint(phone) {
+						text-align: center;
+						padding-top: 15px;
+						padding-right: 15px;
+					}
+					small {
+						display: inline-block;
+						font-size: 14px;
+						color:$color-white;
+						@include font-shadow;
+					}
+				}
+			}
+		}
+	}
+	/* blog sidebar */
+	#blog-sidebar {
+	/* tag cloud */
+	.tag-box {
+		padding:25px;
+		background:$color-green;
+		margin-bottom: 25px;
+		@include block-shadow;
+		color:$color-white;
+		@include breakpoint(tablet) {
+			padding:15px;
+		}
+		li {
+			a {
+				color:$color-white;
+				font-family: $font-heading;
+				display: inline-block;
+				padding:4px;
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}		
+	}
+	/* arhcive */
+	.archive-box {
+		padding:25px;
+		background:$color-white;
+		margin-bottom: 25px;
+		@include block-shadow;
+		@include breakpoint(tablet) {
+			padding:15px;
+		}
+				.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+					width: 100%;
+					height: 50px;
+					margin-bottom: 10px;
+					border-radius:9px;
+					@include breakpoint(tablet) {
+						height: 40px;
+					}
+					&:focus {
+						outline: 0;
+						background:$color-white;
+					}
+					&:hover {
+						background:$color-white;
+					}					
+					@include breakpoint(phone) {
+						width: 100%;
+					}
+				}
+				.btn {
+					height: 50px;
+					border-radius:0px;
+					font-size: 16px;
+					color:#353535;
+					border:none;
+					border-radius:12px;
+					border:1px solid #ddd;
+					@include breakpoint(tablet) {
+						font-size: 14px;
+						height: 40px;
+					}
+					&:focus {
+						outline: 0;
+						background:$color-white;
+					}
+					&:hover {
+						background:$color-white;
+					}
+				}
+				button {
+					&:focus {
+						outline: 0!important;
+						box-shadow:none;
+					}		
+					&:hover {
+						background:none;
+					}	
+				}
+				div.open {
+					.caret {
+						background:$color-green;
+						&:after {
+							color:$color-white;
+						}
+					}
+				}
+				.btn-group {
+					width: 100%;
+				}
+				.caret {
+					background:url(../img/ico/gray-down.jpg) no-repeat center center;
+					width: 48px;
+					height: 48px;
+					border:none;
+					background:$color-white;
+					top:2px;
+					right: 1px;
+					@include animate-fade;
+					border-top-right-radius: 9px;
+					border-bottom-right-radius: 9px;	
+					border-left:1px solid #cfe9a4;
+					@include breakpoint(tablet) {
+						height: 38px;
+						width: 38px;
+					}
+					&:after {
+						@include font-ico;
+						@include centre(y);
+						content:'\f107';
+						left:40%;
+					}				
+				}		
+				.btn-group.open .dropdown-toggle {
+					box-shadow:none!important;
+					background:$color-white!important;
+				}		
+				.btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.btn-default.dropdown-toggle {
+					background:none;
+					background:$color-white!important;
+				}		
+				.dropdown-menu {
+					padding:5px;
+					box-shadow:none;
+					li {
+						a {
+							font-size: 14px;
+							color:$color-black;
+							padding:5px;
+							&:hover {
+							}
+						}
+					}
+				}	
+		
+	}		
+		/* cats */
+		#blog-cats {
+			@include pink-grad;
+			padding:25px;
+			@include block-shadow;
+			color:$color-white;
+			margin-bottom: 35px;
+			@include breakpoint(tablet) {
+				padding:15px;
+				margin-bottom: 25px;
+			}
+			ul {
+				li {
+					a {
+						display: block;
+						color:$color-white;
+						font-size: 16px;
+						padding-top: 10px;
+						padding-bottom: 10px;
+						@include font-shadow;
+						border-bottom: 1px solid rgba(255,255,255,0.2);
+						position: relative;
+						padding-left: 15px;
+						@include breakpoint(tablet) {
+							font-size: 14px;
+						}
+						&:before {
+							left:0px;
+							@include font-ico;
+							top:8px;
+							content:'\f105';
+							@include animate-fade;
+						}
+						&:hover {
+							opacity: 0.6;
+							&:before {
+								left:5px;
+							}
+						}
+					}
+				}
+			}
+		}
+		/* cta */
+		#sidebar-cta {
+			border-radius:9px;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 30px;
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+				.image-overlay {
+					background:rgba(38,34,98,0.9);
+				}
+			}
+			img {
+				width: 100%;
+				@include animate-fade;
+				border-radius:9px;
+			}
+			.image-overlay {
+				position: absolute;
+				top:0px;
+				left:0px;
+				width: 100%;
+				height: 100%;
+				background:rgba(38,34,98,0.6);
+				@include animate-fade;
+			}
+			.sidebar-cta-content {
+				width: 100%;
+				@include centre(both);
+				text-transform: uppercase;
+				color:$color-white;
+				.title {
+					display: block;
+					text-align: center;
+					font-size: 24px;
+					font-weight: $bold;
+					font-family: $font-heading;
+					@include font-shadow;
+					@include breakpoint(tablet) {
+						font-size: 22px;
+					}
+				}
+				.subtitle {
+					font-weight: $regular;
+					font-size: 18px;
+					font-family: $font-heading;
+					display: block;
+					margin-top: 6px;
+					@include breakpoint(tablet) {
+						font-size: 16px;
+					}
+				}
+				.contact-btn {
+					@include read-btn;
+					margin:0px auto;
+					margin-top: 20px;
+					width: 200px;
+					height: 42px;
+					line-height: 42px;
+					font-size: 16px;
+					font-weight: $bold;
+					@include animate-fade;
+					@include breakpoint(tablet) {
+						font-size: 14px;
+						width: 180px;
+					}
+					&:hover {
+						background:$color-white;
+						color:$color-green;
+					}
+				}
+			}
+		}
+		/* blog  latest */
+		#latest-blog {
+			header {
+				@include green-grad;
+				color:$color-white;
+				margin-bottom: 10px;
+				.title {
+					@include font-shadow;
+					font-size: 20px;
+					padding-left: 25px;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					display: block;
+					font-family: $font-heading;
+					@include breakpoint(laptop) {
+						font-size: 18px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 18px;
+					}
+				}
+			}
+			.blog-box {
+				background:$color-white;
+				@include block-shadow;
+				padding:20px;
+				margin-bottom: 10px;
+				@include breakpoint(tablet) {
+					padding:15px;
+				}
+				img {
+					float: left;
+					box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.17);
+					padding:5px;
+					margin-right: 20px;
+					@include animate-fade;
+					@include breakpoint(tablet) {
+						display: none;
+					}
+					&:hover {
+						opacity: 0.6;
+					}
+				}
+				.image-link {
+				}
+				h6 {
+					font-size: 16px;
+					line-height: 20px;
+					margin-bottom: 10px;
+					@include breakpoint(laptop) {
+						font-size: 14px;
+						line-height: 18px;
+					}
+					a {
+						color:$color-pink;
+						&:hover {
+							color:$color-green;
+						}
+					}
+				}
+				time {
+					color:#919191;
+					font-size: 12px;
+					font-family: $font-heading;
+					i {
+						color:$color-green;
+						margin-right: 5px;
+					}
+				}
+			}
+		}	
+		/* facebook */
+		#facebook-block {
+			@include block-shadow;
+			margin-top: 10px;
+			@include breakpoint(phone) {
+				display: none!important;
+			}
+			@include breakpoint(laptop) {
+				display: none!important;
+			}
+			header {
+				background:$color-green;
+				color:$color-white;
+				.title {
+					@include font-shadow;
+					font-size: 20px;
+					padding-left: 25px;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					display: block;
+					font-family: $font-heading;
+					@include breakpoint(laptop) {
+						font-size: 18px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 18px;
+					}
+				}	
+			}	
+			iframe {
+			}
+			.facebook-content {
+				background:$color-white;
+				padding:20px;
+			}	
+		}	
+	}
+}
+
+/*=====  End of Blog Wrapper  ======*/
+
+/*==================================
+=            |News Page            =
+==================================*/
+
+#news-wrapper {
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background:#eaecf0;
+	.news-box {
+		background:$color-white;
+		padding:40px;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15); 
+		margin-bottom: 30px;
+		@include breakpoint(phone) {
+			padding:25px;
+		}
+		time {
+			color:$color-gray;
+			font-size: 16px;
+		}
+		small {
+			font-size: 16px;
+			color:$color-pink;
+			text-transform: uppercase;
+			a {
+				color:$color-pink;
+			}
+		}
+		h3 {
+			font-size: 24px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			line-height: 120%;
+			@include breakpoint(laptop) {
+				font-size: 20px;
+			}
+			@include breakpoint(phone) {
+				font-size: 20px;
+			}
+			a {
+				color:$color-green;
+				&:hover {
+					color:$color-pink;
+				}
+			}
+		}
+		p {
+			@include regular-text;
+			color:$color-gray;
+			text-shadow: none;
+			margin-bottom: 25px;
+		}
+		.read-btn {
+			@include read-btn;
+		}
+	}
+}
+
+/*=====  End of |News Page  ======*/
+
+/*===================================
+=            Blog Single            =
+===================================*/
+
+#blog-single-block {
+	background:$color-white;
+	padding-left: 30px;
+	padding-top: 40px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15); 
+	h1 {
+		color:$color-pink;
+		font-size: 32px;
+		margin-bottom: 30px;
+		@include breakpoint(tablet) {
+			font-size: 28px;
+		}
+		@include breakpoint(phone) {
+			font-size: 26px;
+		}
+	}
+	h2 {
+		color:$color-green;
+		font-size: 24px;
+		margin-bottom: 30px;
+		@include breakpoint(tablet) {
+			font-size: 22px;
+		}
+		@include breakpoint(phone) {
+			font-size: 20px;
+		}
+	}	
+	h3 {
+		color:$color-black;
+		font-size: 19px;
+		margin-bottom: 30px;
+		@include breakpoint(tablet) {
+			font-size: 18px;
+		}
+		@include breakpoint(phone) {
+			font-size: 17px;
+		}
+	}		
+	h4 {
+		color:$color-pink;
+		font-size: 17px;
+		margin-bottom: 30px;
+		@include breakpoint(tablet) {
+			font-size: 16px;
+		}
+		@include breakpoint(phone) {
+			font-size: 15px;
+		}
+	}	
+	h5 {
+		color:$color-pink;
+		font-size: 16px;
+		margin-bottom: 30px;
+		font-weight: $bold;
+		@include breakpoint(tablet) {
+			font-size: 15px;
+		}
+		@include breakpoint(phone) {
+			font-size: 15px;
+		}
+	}			
+	p {
+		@include regular-text;
+		color:$color-gray;
+		text-shadow: none;
+		margin-bottom: 30px;
+		a {
+			color:$color-pink;
+			&:hover {
+				color:$color-green;
+			}
+		}
+	}	
+	.aligncenter {
+		width: 100%;
+		margin-bottom: 25px;
+		padding:10px;
+		box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2); 
+		margin-top: 25px;		
+		max-width: 100%;
+	}
+	.alignright {
+		margin-bottom: 25px;
+		padding:10px;
+		box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2); 
+	}	
+	.alignleft {
+		margin-bottom: 25px;
+		padding:10px;
+		box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2); 
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		max-width: 100%;		
+	}		
+	img {
+		height: auto;
+	}
+	.featured-blog-image {
+		width: 100%;
+		margin-bottom: 25px;
+		padding:10px;
+		box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2); 
+		margin-top: 25px;			
+	}
+	.alignright {
+		float: right;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	ul {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		li {
+			color:$color-gray;
+			font-size: 16px;
+			display: block;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			position: relative;
+			padding-left: 25px;
+			line-height: 20px;
+			&:before {
+				content:'\f1db';
+				@include font-ico;
+				left:0px;
+				top:11px;
+				color:$color-green;
+				font-size: 13px;
+			}
+			a {
+				color:$color-pink;
+			}
+		}
+	}
+	ol {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		li {
+			color:$color-gray;
+			font-size: 16px;
+			display: block;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			position: relative;
+			padding-left: 25px;
+			line-height: 20px;
+			&:before {
+				content:'\f1db';
+				@include font-ico;
+				left:0px;
+				top:11px;
+				color:$color-green;
+				font-size: 13px;
+			}
+			a {
+				color:$color-pink;
+			}
+		}
+	}	
+	#meta-info {
+		margin-top: 20px;
+		border-bottom:1px solid #ddd;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		#category-links {
+			a {
+				text-transform: uppercase;
+				color:$color-pink;
+				font-size: 14px;
+				&:after {
+					content:',';
+					display: inline-block;
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+				&:hover {
+					color:$color-green;
+				}
+				&:last-child {
+					&:after {
+						display: none!important;
+					}
+				}
+			}
+		}
+		#date-of-post {
+			text-align: right;
+			@include breakpoint(tablet) {
+				text-align: left;
+				padding-top: 10px;
+			}
+			@include breakpoint(phone) {
+				text-align: left;
+				padding-top: 10px;
+			}
+			small {
+				font-size: 14px;
+				opacity: 0.5;
+				text-transform: uppercase;
+				i {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of Blog Single  ======*/

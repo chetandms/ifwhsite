@@ -1,0 +1,1 @@
+function init(t){if(t){var e=httpGet("//1qreputation.com/institute-for-womens-health/w2/data.php?id="+t);document.getElementById("oReviews").innerHTML=e}}function httpGet(t){var e=new XMLHttpRequest;return e.open("GET",t,!1),e.send(null),e.responseText}

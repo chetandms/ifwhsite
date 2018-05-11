@@ -1,0 +1,164 @@
+/*===================================
+=            Intro Block            =
+===================================*/
+
+#intro-services-block {
+	padding-top: 70px;
+	padding-bottom: 80px;
+	@include breakpoint(phone) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	h2 {
+		text-align: center;
+		color:$color-pink;
+		font-size: 36px;
+		@include breakpoint(phone) {
+			font-size: 32px;
+		}
+	}
+	img {
+		margin:0px auto;		
+		margin-top: 25px;
+		display: block;
+		margin-bottom: 25px;
+	}
+	p {
+		@include regular-text;
+		text-shadow: none;
+		color:$color-gray;
+	}
+}
+
+/*=====  End of Intro Block  ======*/
+
+/*=====================================
+=            Service Block            =
+=====================================*/
+
+.service-block {
+		padding-top: 70px;
+		padding-bottom: 60px;	
+		&.green-box {
+			background-color: $color-green!important;
+			@include breakpoint(laptop) {
+				background:$color-green!important;
+			}
+			@include breakpoint(tablet) {
+				background:$color-green!important;
+			}
+			@include breakpoint(phone) {
+				background:$color-green!important;
+			}
+		}
+		&.pink-box {
+			background-color:$color-pink!important;
+			@include breakpoint(laptop) {
+				background:$color-pink!important;
+			}
+			@include breakpoint(tablet) {
+				background:$color-pink!important;
+			}
+			@include breakpoint(phone) {
+				background:$color-pink!important;
+			}			
+		}
+		&.blue-box {
+			background-color:#0899a9!important;
+			@include breakpoint(laptop) {
+				background:#0899a9!important;
+			}	
+			@include breakpoint(tablet) {
+				background:#0899a9!important;
+			}	
+			@include breakpoint(phone) {
+				background:#0899a9!important;
+			}	
+		}
+		&.white-box {
+			background-color:$color-white!important;
+			h3 {
+				color:$color-green!important;
+				text-shadow: none!important;
+			}
+			p {
+				color:$color-gray!important;
+				text-shadow: none!important;
+			}
+			ul {
+				li {
+					a {
+						color:$color-gray;
+						text-shadow: none;
+						&:before {
+							color:$color-green;
+						}
+					}
+				}
+			}
+		}
+		h3 {
+			margin:0px auto;
+			color:$color-white;
+			font-size: 42px;
+			@include font-shadow;
+			margin-bottom: 50px;
+			text-align: center;
+			max-width: 600px;
+			@include breakpoint(laptop) {
+				font-size: 36px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 34px;
+			}
+			@include breakpoint(phone) {
+				font-size: 32px;
+			}
+		}
+		p {
+			@include regular-text;
+		}
+		img {
+			border-radius:100%;
+			float: right;
+			border:5px solid $color-white;
+			@include block-shadow;
+			margin-left: 30px;
+			@include breakpoint(phone) {
+				float: none;
+				margin:0px auto;
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		ul {
+			margin-top: 25px;
+			margin-bottom: 25px;
+			li {
+				a {
+					color:$color-white;
+					display: block;
+					padding-top: 8px;
+					padding-bottom: 8px;
+					font-size: 16px;
+					@include font-shadow;
+					position: relative;
+					padding-left: 20px;
+					line-height: 20px;
+					&:before {
+						@include font-ico;
+						content:'\f105';
+						color:$color-white;
+						left:0px;
+						top:10px;
+						text-shadow: none;
+					}	
+					&:hover {
+						opacity: 0.6;
+					}				
+				}
+			}
+		}
+}
+
+/*=====  End of Service Block  ======*/

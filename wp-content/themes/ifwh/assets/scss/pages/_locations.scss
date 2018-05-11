@@ -1,0 +1,444 @@
+/*====================================
+=            Page Wrapper            =
+====================================*/
+
+#page-wrapper {
+	background:#eaecf0;
+	padding-bottom: 60px;
+	#map-wrapper {
+		border:10px solid $color-white;
+		margin-bottom: 40px;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+	}
+	/* locaiton box */
+	.location-box {
+		background:$color-white;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+		margin-bottom: 30px;
+		&:hover {
+			.image-opacity {
+				opacity: 1!important;
+			}
+		}
+		.location-title {
+			@include green-grad;
+			text-align: center;
+			color:$color-white;
+			font-size: 18px;
+			display: block;
+			font-family: $font-heading;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			@include font-shadow;
+			@include breakpoint(laptop) {
+				font-size: 16px;
+			}
+			@include breakpoint(tablet) {
+				font-size: 16px;
+			}
+			@include breakpoint(phone) {
+				font-size: 16px;
+			}
+		}
+		.location-content {
+			padding:20px;
+			.oqra-widget-content {
+				height: 80px;
+				margin-bottom: 20px;
+				@include breakpoint(phone) {
+					height: auto;
+				}
+			}
+			.image-holder {
+				height: 170px;
+				margin-bottom: 20px;
+				position: relative;
+				img {
+					width: 100%;
+					object-fit: cover;
+					height: 170px;
+					padding:5px;
+					box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+				}
+				.image-opacity {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top:0px;
+					left:0px;
+					background:rgba(7,130,144, 0.8);
+					opacity: 0;
+					@include animate-fade;
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						border-radius:6px;
+						background:url(../img/ico/pin.png) no-repeat center center;
+					}
+				}				
+			}
+			address {
+				font-size: 16px;
+				color:$color-gray;
+				line-height: 18px;
+				font-style: normal;
+				margin-bottom: 15px;
+				position: relative;
+				padding-left: 25px;
+				&:before {
+					@include font-ico;
+					top:0px;
+					content:'\f041';
+					color:$color-green;
+					left:0px;
+					width: 30px;
+				}
+			}
+			p {
+				position: relative;
+				&.tel-ico {
+					&:before {
+						@include font-ico;
+						top:-1px;
+						color:$color-green;
+						left:0px;
+						width: 20px;						
+						content:'\f095';							
+					}				
+				}		
+				&.fax-ico {
+					&:before {
+						@include font-ico;
+						top:-1px;
+						color:$color-green;
+						left:0px;
+						width: 20px;						
+						content:'\f1ac';							
+					}				
+				}						
+			}
+			p {
+				font-size: 16px;
+				color:$color-gray;
+				margin-bottom: 15px;
+				padding-left: 25px;
+				a {
+					color:$color-gray;
+					&:hover {
+						color:$color-green;
+					}
+				}
+			}
+			.see-details-btn {
+				@include read-btn;
+			}
+		}
+	}
+}
+
+/*=====  End of Page Wrapper  ======*/
+
+/*===================================
+=            SIngle page            =
+===================================*/
+
+#location-single-wrapper {
+	background:#eaecf0;
+	padding-bottom: 100px;
+	.location-box {
+		background:$color-white;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+		padding-bottom: 80px;
+		height: 530px;
+			header {
+				text-align: center;
+				height: 60px;
+				line-height: 60px;
+				@include pink-grad;
+				.title {
+					font-size: 18px;
+					color:$color-white;
+					@include font-shadow;
+					font-family: $font-heading;
+					@include breakpoint(laptop) {
+						font-size: 16px;
+					}
+					@include breakpoint(tablet) {
+						font-size: 16px;
+					}
+					@include breakpoint(phone) {
+						font-size: 16px;
+					}
+				}
+			}				
+		.location-content {
+			padding:20px;
+			img {
+				width: 100%;
+				object-fit: cover;
+				height: 170px;
+				padding:5px;
+				box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+				margin-bottom: 20px;
+			}
+			address {
+				font-size: 16px;
+				color:$color-gray;
+				line-height: 18px;
+				font-style: normal;
+				margin-bottom: 15px;
+				position: relative;
+				padding-left: 25px;
+				&:before {
+					@include font-ico;
+					top:0px;
+					content:'\f041';
+					color:$color-green;
+					left:0px;
+					width: 30px;
+				}
+				br {
+					@include breakpoint(tablet) {
+						display: none;
+					}
+					@include breakpoint(phone) {
+						display: none;
+					}
+				}
+			}
+			.book-btn {
+				display: block;
+				height: 80px;
+				line-height: 80px;
+				border-radius:9px;
+				background:$color-pink;
+				margin-bottom: 13px;
+				@include font-shadow;
+				@include block-shadow;
+				font-size: 24px;
+				color:$color-gray;
+				text-align: center;		
+				color:$color-white;
+				margin-top: 35px;
+				@include breakpoint(laptop) {
+					font-size: 22px;
+				}
+				@include breakpoint(tablet) {
+					font-size: 20px;
+					height: 60px;
+					line-height: 60px;
+				}
+				@include breakpoint(phone) {
+					font-size: 20px;
+					height: 60px;
+					line-height: 60px;
+				}
+				&:hover {
+					background:$color-green;
+				}
+			}
+			p {
+				position: relative;
+				&.tel-ico {
+					&:before {
+						@include font-ico;
+						top:-1px;
+						color:$color-green;
+						left:0px;
+						width: 20px;						
+						content:'\f095';							
+					}				
+				}		
+				&.fax-ico {
+					&:before {
+						@include font-ico;
+						top:-1px;
+						color:$color-green;
+						left:0px;
+						width: 20px;						
+						content:'\f1ac';							
+					}				
+				}						
+			}
+			p {
+				font-size: 16px;
+				color:$color-gray;
+				margin-bottom: 15px;
+				padding-left: 25px;
+				a {
+					color:$color-gray;
+				}
+			}
+			.read-btn {
+				@include read-btn;
+			}				
+		}		
+	}
+	#map-wrap {
+		height: 530px;
+		border:10px solid $color-white;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);		
+	}
+	.location-info-box {
+		background:$color-white;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);	
+		margin-top: 30px;
+		min-height: 380px;
+		.hours-notice {
+			font-size: 14px;
+			color:$color-green;
+			line-height: 20px;
+			background:#fdf6d3;
+			border:1px solid #ebdb95;
+			border-radius:6px;
+			padding:10px;
+			color:#555555;
+			padding-left: 20px;
+		}
+		h5 {
+			color:$color-white;
+			font-size: 18px;
+			font-family: $font-heading;
+			@include green-grad;
+			@include font-shadow;
+			height: 60px;
+			line-height: 60px;
+			@include breakpoint(tablet) {
+				font-size: 14px;
+				height: 50px;
+				line-height: 50px;
+			}
+			img {
+				margin-left: 20px;
+				margin-right: 10px;
+				position: relative;
+				top:5px;
+				@include breakpoint(tablet) {
+					margin-left: 10px;
+					margin-right: 7px;
+				}
+			}
+		}
+		.bus-content {
+			padding:40px;
+			@include breakpoint(laptop) {
+				padding:20px;
+			}
+			@include breakpoint(tablet) {
+				padding:15px;
+				padding-top: 20px;
+			}
+			@include breakpoint(phone) {
+				padding:20px;
+			}
+			li {
+				display: block;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			small {
+				width: 32px;
+				height: 32px;
+				background:$color-pink;
+				border-radius:100%;
+				display: inline-block;
+				text-align: center;
+				font-size: 15px;
+				color:$color-white;
+				line-height: 32px;
+				position: relative;
+				margin-right: 50px;
+				@include breakpoint(tablet) {
+					font-size: 13px;
+				}
+				&:after {
+					@include font-ico;
+					position: absolute;
+					right: -35px;
+					@include centre(y);
+					content:'\f07e';
+					color:$color-black;
+					font-size: 20px;
+					opacity: 0.7;
+				}
+			}
+			span {
+				font-weight: $bold;
+				@include breakpoint(tablet) {
+					font-size: 14px;
+				}
+				a {
+					color:$color-green;
+					&:hover {
+						color:$color-pink;
+					}
+				}
+			}
+		}
+		.info-content {
+			padding:40px;
+			@include breakpoint(laptop) {
+				padding:20px;
+			}
+			@include breakpoint(tablet) {
+				padding:20px;
+			}
+			@include breakpoint(phone) {
+				padding:20px;
+			}
+			.day {
+				display: block;
+				font-size: 16px;
+				color:$color-gray;
+				@include breakpoint(tablet) {
+					font-size: 14px;
+				}
+			}
+			.time {
+				display: block;
+				font-size: 24px;
+				color:$color-black;
+				margin-top: 5px;
+				margin-bottom: 20px;
+				@include breakpoint(tablet) {
+					font-size: 17px;
+				}
+			}
+			ul {
+				li {
+					a {
+						color:$color-gray;
+						display: block;
+						font-size: 16px;
+						padding-top: 7px;
+						padding-bottom: 7px;
+						position: relative;
+						padding-left: 20px;
+						@include breakpoint(tablet) {
+							font-size: 14px;
+							line-height: 18px;
+							padding-left: 15px;
+						}
+						&:before {
+							@include font-ico;
+							content:'\f105';
+							color:#5ba659;
+							left:0px;
+							top:7px;
+							text-shadow: none;
+							@include breakpoint(tablet) {
+								top:8px;
+							}
+						}
+						&:hover {
+							color:$color-green;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of SIngle page  ======*/

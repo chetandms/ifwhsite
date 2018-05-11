@@ -1,0 +1,92 @@
+/* Login CSS */
+
+
+body.login div#login form#loginform p.submit input#wp-submit {
+	background: #6bad4d;
+	box-shadow:none;
+	border:1px solid #6bad4d;
+	text-shadow: none;
+	text-transform: uppercase;
+	color:#fff;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+	background: #f05375;
+	border:1px solid #f05375;
+}
+
+.login #login_error, .login .message {
+	border-left:4px solid #1eab60;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover {
+	color:#b91931;
+}
+
+.login #backtoblog a {
+	font-weight: bold;
+	color:#000;
+}
+
+.login #backtoblog a, .login #nav a {
+	font-weight: bold;
+	color:#000;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #6bad4d;
+	box-shadow:none;
+	border:1px solid #6bad4d;
+	text-shadow: none;
+	color:#fff;
+}
+
+.wp-core-ui .button-group.button-large .button:hover , .wp-core-ui .button.button-large:hover {
+	background: #f05375;
+	border:1px solid #f05375;
+}
+
+body.login {
+	background-color: #eaecf0;
+}
+
+#login {
+	padding-top: 3%!important;
+}
+
+.login form .forgetmenot label {
+	position: relative;
+	top:5px;
+}
+
+#nav {
+	text-align: center;
+}
+
+#nav a:hover {
+	opacity: 0.5;
+}
+
+#backtoblog a {
+	text-align: center;
+	background: #08a1b3;
+	display: block;
+	margin:0px;
+	padding:15px;
+	color:#fff!important;
+}
+
+#backtoblog a:hover {
+	background: #078392;
+	color:#fff!important;
+}
+
+.login #backtoblog, .login #nav {
+	padding:0px;
+}
+
+.login form {
+	border:1px solid #f0ede9;
+	background: #fff;
+}
+
